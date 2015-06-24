@@ -70,9 +70,9 @@ int main()
     // pop. Logs for looping example.
     Logger *Logs[] = {new LogToFile, new LogToDataBase, new LogToWebService, nullptr};
 
-    for(void *log : Logs)
+    for(Logger *log : Logs)
     {
-        app->log("Some DATA", (Logger*)log);
+        app->log("Some DATA", log);
     }
     app->log("Some DATA");
 
