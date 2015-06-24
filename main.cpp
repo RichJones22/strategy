@@ -68,7 +68,7 @@ int main()
     App *app = new App;
 
     // pop. Logs for looping example.
-    void *Logs[] = {new LogToFile, new LogToDataBase, new LogToWebService, nullptr};
+    Logger *Logs[] = {new LogToFile, new LogToDataBase, new LogToWebService, nullptr};
 
     for(void *log : Logs)
     {
